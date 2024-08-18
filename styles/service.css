@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+
+:root {
+    --color-primaria: #000000;
+    --color-secundaria: #F6F6F6;
+    --color-terciaria: #22D4FD;
+    --color-hover: #272727;
+
+    --fuente-krona: 'Krona One', sans-serif;
+    --fuente-montserrat: 'Montserrat', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin:0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--color-primaria);
+    color: var(--color-secundaria);
+}
+
+.header{
+    padding: 2% 0% 0% 15%;
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+.header__menu__link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciaria);
+    text-decoration: none;
+
+}
+
+ /* Contenedor principal que define la estructura en columnas */
+ .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Espacio equitativo entre las secciones */
+    padding: 2% 15% 2% 15%;
+    
+}
+
+/* Estilo de cada sección (una fila del grid) */
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #272727;
+    padding: 2% 15% 2% 15%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    flex: 1; /* Asegura que todas las secciones tengan la misma altura */
+    border: 5px solid #22D4FD;
+    gap: 100px;
+}
+
+.text, .image {
+    flex-basis: 50%; /* Asegura que ambas partes ocupen el 50% del ancho de la sección */
+    padding: 0; /* Elimina cualquier padding que pueda afectar la distribución */
+    box-sizing: border-box; /* Asegura que padding y borde no afecten el ancho */
+}
+
+/* Subdivisión dentro de cada sección: una para texto y otra para imagen */
+.text {
+    flex: 1; /* Ocupa la mitad del espacio */
+    padding-right: 20px;
+    height: auto;
+    width: 600px;
+}
+
+.image {
+    padding: auto;
+    height: 300px;
+    width: 400px;
+    flex: 1; /* Ocupa la otra mitad del espacio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 500px;
+}
+
+
+
+.presentacion__contenido__titulo{
+    padding: 2% 15% 2% 15%;;
+    font-size: 2rem;
+    font-family: var(--fuente-krona);
+}
+
+.titulo-destaque {
+    color: var(--color-terciaria); ;
+}
+
+.subtitulos{
+    font-size: 1.8rem;
+    font-family: var(--fuente-montserrat);  
+}
+
+.presentacion__contenido__texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+}
+
+.presentacion__imagen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: auto;
+}
+
+.footer{
+    color:var(--color-primaria);
+    background-color: var(--color-terciaria);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+
+    .header{
+         padding: 10%;  
+    }
+    .header__menu{
+        justify-content: center;
+    }
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+
+    }
+    .image-section {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center; /* Centrar las imágenes horizontalmente */
+        justify-content: center; /* Centrar las imágenes verticalmente */
+    }
+
+    .presentacion__contenido{
+        width: auto;
+    }
+    
+}
