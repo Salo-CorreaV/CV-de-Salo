@@ -130,16 +130,31 @@ body{
 @media (max-width: 1200px) {
 
     .header{
-         padding: 10%;  
+         padding: 10%; 
+         height: auto;
+         width: auto; 
     }
+    
     .header__menu{
         justify-content: center;
     }
-    .presentacion{
-        flex-direction: column-reverse;
+    
+    .section{
+        flex-direction: column;
         padding: 5%;
-
     }
+
+    .image{
+        padding: 5%;
+        height: 150px;
+        width: 200px;
+    }
+    
+    .text{
+        height: auto;
+        width: 300px;
+    }
+
     .image-section {
         display: flex;
         flex-direction: column-reverse;
